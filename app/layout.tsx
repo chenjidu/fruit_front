@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "水果批发平台",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className="antialiased">
         <Providers>{children}</Providers>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
