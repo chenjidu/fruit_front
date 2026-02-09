@@ -38,7 +38,7 @@ export const authOptions: NextAuthOptions = {
           email: user.email,
           name: user.name,
           role: user.role,
-          businessName: user.businessName
+          businessName: user.businessName ?? undefined
         }
       }
     })
@@ -47,8 +47,7 @@ export const authOptions: NextAuthOptions = {
     strategy: 'jwt'
   },
   pages: {
-    signIn: '/auth/signin',
-    signUp: '/auth/signup'
+    signIn: '/auth/signin'
   },
   callbacks: {
     async jwt({ token, user }) {

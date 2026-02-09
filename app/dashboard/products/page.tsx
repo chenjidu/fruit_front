@@ -13,6 +13,7 @@ interface Product {
   unit: string
   imageUrl: string | null
   isActive: boolean
+  wholesalerId: string
   category: {
     id: string
     name: string
